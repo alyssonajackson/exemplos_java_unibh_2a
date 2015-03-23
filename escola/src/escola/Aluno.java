@@ -39,7 +39,7 @@ public class Aluno {
 	public void listaDisciplinas(){
 		for(int i = 0; i < this.disciplinas.size(); i++){
 			Disciplina d = disciplinas.get(i);
-			System.out.println(d.getNome() + " (notas: " + d.listaNotas() + ")");
+			System.out.println(d.getNome() + " (notas: " + d.listaNotas() + "média: " + d.getMedia() + ")");
 		}
 	}
 
