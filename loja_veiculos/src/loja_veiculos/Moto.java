@@ -4,6 +4,10 @@ public class Moto extends Veiculo{
 
 	private int cilidradas;
 
+	public Moto(){
+		this.setRodas(2);
+	}
+	
 	public int getCilidradas() {
 		return cilidradas;
 	}

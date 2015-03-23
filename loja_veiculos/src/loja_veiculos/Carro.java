@@ -6,6 +6,10 @@ public class Carro extends Veiculo{
 	private Boolean possui_4_portas;
 	private Boolean portas_abertas;
 	
+	public Carro(){
+		this.setRodas(4);
+	}
+	
 	public Boolean getPossui_ar_condicionado() {
 		return possui_ar_condicionado;
 	}

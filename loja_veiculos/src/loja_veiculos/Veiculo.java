@@ -10,6 +10,12 @@ public abstract class Veiculo {
 	private String tipo_combustivel;
 	private int rodas;
 	
+	public int getRodas() {
+		return rodas;
+	}
+	public void setRodas(int rodas) {
+		this.rodas = rodas;
+	}
 	public String getModelo() {
 		return modelo;
 	}
@@ -51,10 +57,11 @@ public abstract class Veiculo {
 	}
 	
 	public void imprimirFichaDoVeiculo(){
-		System.out.println("Cliente: " + cliente.getNome() + "(CPF: " + cliente.getCpf() + ")");
+		System.out.println("Cliente: " + cliente.getNome() + " (CPF: " + cliente.getCpf() + ")");
 		System.out.println("Marca: " + this.getMarca());
 		System.out.println("Modelo: " + this.getModelo());
 		System.out.println("Km por litro: " + this.getKm_por_litro());
+		System.out.println("Rodas: " + this.getRodas());
 		this.verifica_economia();
 	}
 	
