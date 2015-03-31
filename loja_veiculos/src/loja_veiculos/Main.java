@@ -11,6 +11,8 @@ public class Main {
 		c1.setMarca("Toyota");
 		c1.setKm_por_litro(9D);
 		c1.setCliente(p1);
+		c1.acende_farol();
+		c1.ligar();
 
 		c1.imprimirFichaDoVeiculo();
 

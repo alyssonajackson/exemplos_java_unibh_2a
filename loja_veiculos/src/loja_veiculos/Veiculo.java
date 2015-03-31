@@ -9,6 +9,8 @@ public abstract class Veiculo {
 	private Double km_por_litro;
 	private String tipo_combustivel;
 	private int rodas;
+	private Boolean farol_aceso = false;
+	private Boolean ligado = false;
 	
 	public int getRodas() {
 		return rodas;
@@ -56,6 +58,28 @@ public abstract class Veiculo {
 	public void verifica_economia(){
 	}
 	
+	public Boolean verifica_farol(){
+		return this.farol_aceso;
+	}
+	
+	public void acende_farol(){
+		if(this.farol_aceso){
+			System.out.println("O farol já está aceso.");
+		}else{
+			this.farol_aceso = true;
+			System.out.println("O farol estava apagado, agora está aceso.");
+		}
+	}
+	
+	public void apaga_farol(){
+		if(this.farol_aceso){
+			this.farol_aceso = false;
+			System.out.println("O farol foi apagado.");
+		}else{
+			System.out.println("O farol já está apagado.");
+		}
+	}
+	
 	public void imprimirFichaDoVeiculo(){
 		System.out.println("Cliente: " + cliente.getNome() + " (CPF: " + cliente.getCpf() + ")");
 		System.out.println("Marca: " + this.getMarca());
@@ -63,6 +87,15 @@ public abstract class Veiculo {
 		System.out.println("Km por litro: " + this.getKm_por_litro());
 		System.out.println("Rodas: " + this.getRodas());
 		this.verifica_economia();
+	}
+	
+	public void ligar(){
+		if(this.ligado){
+			System.out.println("Já está ligado.");
+		}else{
+			this.ligado = true;
+			System.out.println("Veículo ligado.");
+		}
 	}
 	
 }
